@@ -1,0 +1,44 @@
+@mixin ellipsis($lines: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+}
+
+@mixin gradient-transition($gradient-a, $gradient-b, $duration: 0.5s, $easing: ease) {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: opacity $duration $easing;
+  }
+
+  &::before {
+    background: $gradient-a;
+    opacity: 1;
+  }
+
+  &::after {
+    background: $gradient-b;
+    opacity: 0;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    opacity: 1;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    opacity: 0;
+  }
+}

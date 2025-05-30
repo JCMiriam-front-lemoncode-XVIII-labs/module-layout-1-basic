@@ -1,0 +1,110 @@
+@use '../../commons/styles/fonts' as *;
+@use '../../commons/styles/breakpoints' as *;
+@use '../../commons/styles/mixins' as *;
+
+:root {
+  // Basic color theme
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --background-color: var(--dark-background-color);
+
+  --background-color-90: var(--dark-background-color-90);
+
+  --primary-font-color: var(--dark-primary-font-color);
+  --secondary-font-color: var(--dark-secondary-font-color);
+  
+  --accent-color: var(--dark-accent-color);
+
+  --accent-gradient: var(--dark-accent-gradient);
+  --accent-gradient-50: var(--dark-accent-gradient-50);
+  --accent-gradient-20: var(--dark-accent-gradient-20);
+
+  --background-gradient: var(--dark-background-gradient);
+  --background-gradient-70: var(--dark-background-gradient-70);
+  --background-gradient-50: var(--dark-background-gradient-50);
+  --background-gradient-20: var(--dark-background-gradient-20);
+
+  --box-shadow: var(--dark-box-shadow);
+  --hover-box-shadow: var(--dark-hover-box-shadow);
+
+  --base-border-radius: 20px;
+
+  --primary-font: "Source Code Pro", monospace;
+}
+
+body:has(#theme-toggle:checked) {
+  --primary-color: var(--light-primary-color);
+  --secondary-color: var(--light-secondary-color);
+  --background-color: var(--light-background-color);
+
+  --background-color-90: var(--light-background-color-90);
+
+  --primary-font-color: var(--light-primary-font-color);
+  --secondary-font-color: var(--light-secondary-font-color);
+  
+  --accent-color: var(--light-accent-color);
+
+  --accent-gradient: var(--light-accent-gradient);
+  --accent-gradient-50: var(--light-accent-gradient-50);
+  --accent-gradient-20: var(--light-accent-gradient-20);
+
+  --background-gradient: var(--light-background-gradient);
+  --background-gradient-70: var(--light-background-gradient-70);
+  --background-gradient-50: var(--light-background-gradient-50);
+  --background-gradient-20: var(--light-background-gradient-20);
+
+  --box-shadow: var(--light-box-shadow);
+  --hover-box-shadow: var(--light-hover-box-shadow);
+
+  --base-border-radius: 0;
+
+  --primary-font: "IBM Plex Mono", monospace;
+}
+
+.theme-toggle__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+
+  .theme-toggle__button--label {
+    .theme-toggle__button--icon-container {
+      width: 40px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transform: translateY(-40px);
+      transition: transform 0.3s ease-out;
+
+      @include gradient-transition(
+        var(--background-gradient),
+        var(--background-gradient-50),
+        0.4s
+      );
+
+      @include small-desktop {
+        @include gradient-transition(
+          var(--accent-gradient-20),
+          var(--accent-gradient-50),
+          0.4s
+        );
+      }
+
+      .icon {
+        font-size: 24px;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+#theme-toggle:checked {
+  & + .theme-toggle__button--label{
+    .theme-toggle__button--icon-container {
+      transform: translate(0, 0);
+    }
+  }
+}
