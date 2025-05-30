@@ -71,8 +71,8 @@ En este proyecto hay muchos estilos, variables y mixins que necesitamos usar en 
 
 #### 1. Clona el repositorio:
 ```bash
-git clone <url-del-repo>
-cd <nombre-del-repo>
+git clone https://github.com/JCMiriam-front-lemoncode-XVIII-labs/module-layout-1-basic.git
+cd module-layout-1-basic
 ```
 
 #### 2. Instala las dependencias:
