@@ -2,6 +2,10 @@
 
 Este repositorio contiene la resolución del **laboratorio del Módulo Layout**, dividido en cuatro ejercicios. Cada uno se encuentra encapsulado en su propio módulo HTML + SCSS dentro de la carpeta `src/components`.
 
+Es posible que me haya complicado un poco la vida con este laboratorio, así que en caso de que sea necesario simplificarlo, modificarlo o hacer alguna corrección, estoy atenta a cualquier comentario.
+
+¡Muchas gracias! 🍋
+
 ---
 
 ## 📁 Estructura del proyecto
