@@ -1,6 +1,6 @@
-# 🎨 Módulo Layout – Laboratorio
+# 🎨 Layout LAB
 
-Este repositorio contiene la resolución del **laboratorio del Módulo Layout**, dividido en cuatro ejercicios. Cada uno se encuentra encapsulado en su propio módulo HTML + SCSS dentro de la carpeta `src/components`.
+Este repositorio contiene la resolución de cuatro componentes, con la propuesta de no utilizar JS para su implementación. Cada uno se encuentra encapsulado en su propio módulo HTML + SCSS dentro de la carpeta `src/components`.
 
 Para ello se realiza una web común, usando únicamente HTML, CSS, SASS y VITE, donde se podrá apreciar la maquetación de cada uno de los componentes solicitados.
 
